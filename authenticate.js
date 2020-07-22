@@ -22,7 +22,7 @@ exports.verifyAdmin = (req, res, next) => {
     if(req.user.admin === true){
         return next();
     }else{
-        err = new Error("you are not admin "+ req.user.admin);
+        err = new Error("you are not admin cannot do this operation");
         return next(err);
     }
 }
